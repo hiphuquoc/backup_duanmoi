@@ -1,0 +1,212 @@
+/* Home ===== màn hình đầu tiên */
+@import 'childs/default.scss';
+@import 'childs/base.scss';
+@import 'childs/header-top.scss';
+@import 'childs/banner.scss';
+// @import 'childs/header-side.scss';
+@import 'childs/breadcrumb.scss';
+// /* Home ===== kém quan trọng (nhưng ít nên đưa vào đây luôn) */
+// @import 'childs/loading.scss';
+@import 'childs/footer.scss';
+// @import 'childs/right.scss';
+// @import 'childs/login.scss';
+// @import 'childs/modal.scss';
+
+
+/* START:: Slider ======================================== */
+.sliderHome {
+    position: relative;
+    overflow: hidden;
+    &_item {
+        overflow: hidden;
+        a, div {
+            transition: all 1s;
+            display: flex;
+            margin: 0;
+            width: 100%;
+            height: 650px;
+            background-repeat: no-repeat !important;
+            background-size: 100% auto !important;
+            overflow: hidden;
+        }
+    }
+    @include slickSliderMain;
+}
+/* END:: Slider */
+
+.layoutPageCategoryBlog {
+    display: flex;
+    align-items: stretch;
+    gap: 2rem;
+    justify-content: center;
+    text-align: justify;
+    &_main {
+        width: 100%;
+    }
+    &_sidebar {
+        flex: 0 0 320px;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        position: relative;
+    }
+    @media(max-width:1199px){
+        gap: 1.5rem;
+        &_sidebar {
+            flex: 0 0 280px;
+        }
+    }
+    @media(max-width: 991px){
+        gap: 1.25rem;
+        &_sidebar {
+            display: none;
+        }
+    }
+}
+
+.sectionBox {
+    &_desc {
+        margin-bottom: 1rem;
+    }
+}
+
+.bussinessPlanBox {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    &_item {
+        width: 100%;
+        border: 1px solid rgb(var(--colorBackgroundLv2));
+        box-shadow: 0 2px 12px rgba(var(--colorBackgroundLv2), 0.5);
+        border-radius: var(--radiusNormal);
+        padding: 1.25rem;
+        &:hover {
+            box-shadow: 0 2px 12px rgba(var(--colorLv1), 0.25);
+        }
+        &_detail {
+            display: flex;
+            align-items: stretch;
+            gap: 1.25rem;
+            &_logo {
+                flex: 0 0 55px;
+                img {
+                    margin: 0;
+                }
+            }
+            &_text {
+                // width: calc(100% - 70px - 1rem);
+                display: flex;
+                flex-direction: column;
+                gap: 0.75rem;
+                &_title {
+                    display: flex;
+                    h2, h3 {
+                        margin: 0;
+                        padding: 0;
+                        color: rgb(var(--colorTitle));
+                        font-family: $fontTitle;
+                        font-size: calc(var(--fontSizeNormal) + 0.35rem);
+                        font-weight: 700;
+                        text-transform: none;
+                        line-height: calc(var(--lineHeightNormal) + 0.1rem);
+                        &:hover {
+                            color: rgb(var(--colorLv2));
+                        }
+                    }
+                }
+                &_subTitle {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.75rem;
+                    font-size: 0.925rem;
+                    color: rgb(var(--colorDesc));
+                    &_item {
+                        display: flex;
+                        align-items: center;
+                        gap: 0.325rem;
+                        height: 20px;
+                        svg {
+                            width: 1.2rem;
+                            height: 1.2rem;
+                        }
+                        &:not(:first-child){
+                            border-left: 1px solid rgb(var(--colorBackgroundLv3));
+                            padding-left: 0.75rem;
+                        }
+                    }
+                }
+                &_desc {
+                    color: rgb(var(--colorDesc));
+                }
+                &_footer {
+                    display: flex;
+                    align-items: flex-end;
+                    &_tags {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 0.5rem;
+                        // margin-top: 0.125rem;
+                        &_item {
+                            background: rgba(var(--colorSLv1), 0.25);
+                            padding: 0.25rem 0.75rem;
+                            font-size: 0.875rem;
+                            font-weight: 500;
+                            border-radius: 50px;
+                        }
+                    }
+                    &_button {
+                        display: flex;
+                        margin-left: auto;
+                        background: rgb(var(--colorLv1));
+                        color: #fff;
+                        padding: 0.75rem 1.5rem;
+                        border-radius: var(--radiusNormal);
+                        font-weight: 600;
+                        letter-spacing: 0.5px;
+                        font-size: 0.875rem;
+                        font-family: $fontTitle;
+                        &:hover {
+                            color: #fff;
+                            background: rgb(var(--colorLv2));
+                        }
+                    }
+                }
+            }
+        }
+        &_infoAndButton {
+            display: flex;
+            flex-direction: column;
+            flex: 0 0 180px;
+            &_info {
+
+            }
+            &_button {
+
+            }
+        }
+    }
+}
+
+.sidebarBox {
+    &_title {
+        color: rgb(var(--colorTitle));
+        font-family: $fontTitle;
+        font-size: calc(var(--fontSizeNormal) + 0.35rem);
+        font-weight: 800;
+        margin-bottom: 1rem;
+    }
+    &_box {
+        &_tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            &_item {
+                background: rgba(var(--colorSLv1), 0.25);
+                padding: 0.25rem 0.75rem;
+                font-size: 0.875rem;
+                font-weight: 500;
+                border-radius: 50px;
+            }
+        }
+    }
+}

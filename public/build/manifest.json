@@ -1,0 +1,17 @@
+{
+  "resources/sources/admin/style.scss": {
+    "file": "assets/style-Crr7uJay.css",
+    "src": "resources/sources/admin/style.scss",
+    "isEntry": true
+  },
+  "resources/sources/main/home-first-view.scss": {
+    "file": "assets/home-first-view-CzUMS8pE.css",
+    "src": "resources/sources/main/home-first-view.scss",
+    "isEntry": true
+  },
+  "resources/sources/main/home-non-first-view.scss": {
+    "file": "assets/home-non-first-view-uvBumCKy.css",
+    "src": "resources/sources/main/home-non-first-view.scss",
+    "isEntry": true
+  }
+}
